@@ -186,6 +186,25 @@ class MainActivity : ComponentActivity() {
 
                         Text(text = text.value)
 
+
+                        Button(onClick = { 
+                            val intent = Intent(context, MusicPlayerActivity::class.java)
+                            startActivity(intent)
+                            
+                        }) {
+
+                            Text(text = "Play Audio Media")
+                        }
+
+                        Button(onClick = {
+                            val intent = Intent(context, VideoPlayerActivity::class.java)
+                            startActivity(intent)
+
+                        }) {
+
+                            Text(text = "Play Video Media")
+                        }
+
                     }
                 }
             }
